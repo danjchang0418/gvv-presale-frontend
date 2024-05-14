@@ -77,7 +77,7 @@ const GVVIndexContainer = styled.div`
   gap: 150px;
   background-color: ${colors.mainColor};
   justify-content: center;
-  align-items: center;
+  align-items: start;
   padding: 48px 0px 42px 0px;
   @media (max-width: 1200px) {
     flex-direction: column;
@@ -110,6 +110,7 @@ const CenterPart = styled.div`
 `;
 
 const RightPart = styled.div`
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   color: white;

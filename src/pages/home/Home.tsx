@@ -58,13 +58,13 @@ const Home = () => {
           </Then>
           <Else>
             <MainPageSection className={isLoading ? "" : "isNotLoading"}>
-              <GVVIndex />
+              {/* <GVVIndex /> */}
               <OverviewIndex />
-              <HowItWorks />
+              {/* <HowItWorks /> */}
               {/* <AboutStafir /> */}
               <ReadOurDocs />
               <AndroidAndIosApp />
-              <PhotoOnlyPage />
+              {/* <PhotoOnlyPage /> */}
               <Faqs />
               <ContactInformation />
               {/* <Footer /> */}
