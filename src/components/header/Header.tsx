@@ -102,31 +102,6 @@ const Header = () => {
           <If condition={!smallerThanLarge}>
             <Then>
               <LinkGroup>
-                <WagmiProvider config={wagmiConfig}>
-                  <QueryClientProvider client={queryClient}>
-                    <w3m-button />
-                    <w3m-network-button />
-                    <w3m-connect-button />
-                    <w3m-account-button />
-
-                    <button onClick={() => modal.open()}>Connect Wallet</button>
-                    <button onClick={() => modal.open({ view: "Networks" })}>
-                      Choose Network
-                    </button>
-                    <button
-                      onClick={() =>
-                        setThemeMode(themeMode === "dark" ? "light" : "dark")
-                      }
-                    >
-                      Toggle Theme Mode
-                    </button>
-                    <pre>{JSON.stringify(state, null, 2)}</pre>
-                    <pre>
-                      {JSON.stringify({ themeMode, themeVariables }, null, 2)}
-                    </pre>
-                    <pre>{JSON.stringify(events, null, 2)}</pre>
-                  </QueryClientProvider>
-                </WagmiProvider>
                 <StyledLink to={homePath()}>{`Home`}</StyledLink>
                 <StyledLink to={""}>{`Page`}</StyledLink>
                 <StyledLink to={""}>{`Portfolio`}</StyledLink>
@@ -140,6 +115,7 @@ const Header = () => {
             </Else>
           </If>
           <StyledButtonGroup>
+            <w3m-button />
             <StyledJoinLink to={"sign"}>{`Join pre-Sell`}</StyledJoinLink>
           </StyledButtonGroup>
         </NavigateSection>
