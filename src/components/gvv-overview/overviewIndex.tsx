@@ -15,12 +15,16 @@ const GVVIndex = () => {
           <SummaryPart>
             <p>{`$GVV tokens is an investment system that integrates multiple liquidity pools of investors into A SINGLE BUSINESS CAPITAL INFRASTRUCTURE. $GVV is banking on the rapidly growing blockchain technology to create a business that invests in emerging tech startups and gives longlasting returns to liquidity providers in proportion to their shares . The $GVV TOKEN COMPRISES DEVELOPERS , TECHNOLOGY EXPERTS , FINANCIAL EXPERTS AND BRANDS WHO ARE AT THE FOREFRONT OF MAKING SURE INVESTOR’S LIQUIDITY POOLS ARE PROPERLY MANAGED TO GIVE HIGH RETURNS OVER AN EXTENSIVE PERIOD OF TIME. BUILT ON THE POLYGON NETWORK , SECURED WITH HIGH END PROTOCOLS AND TAILORED FOR CUSTOM HANDS-OFF INVESTOR MANAGEMENT , $GVV AIMS TO BUILD A SUSTAINABLE AND PROFITABLE VENTURE THAT CUTS ACROSS GENERATIONS AND TIMELINES.`}</p>
           </SummaryPart>
-          <img src={Rectangle} alt=""></img>
+          <SummaryImg src={Rectangle} alt=""></SummaryImg>
         </LeftPart>
         <CenterPart>
           <StyledGlobalImage src={Gloval}></StyledGlobalImage>
-          <img src={ChatBrowser} alt="" style={{ zIndex: 1 }}></img>
-          <img src={LinerChat} alt="" style={{ zIndex: 1 }}></img>
+          <CenterImgChart
+            src={ChatBrowser}
+            alt=""
+            style={{ zIndex: 1 }}
+          ></CenterImgChart>
+          <CenterImg src={LinerChat} alt="" style={{ zIndex: 1 }}></CenterImg>
           <StyledButtonsPart>
             <BuyGVVButton>{`Buy $GVV`}</BuyGVVButton>
             <ReadWhitePaperButton>{`Read White Paper`}</ReadWhitePaperButton>
@@ -69,9 +73,9 @@ const GVVIndex = () => {
 };
 
 const GVVIndexContainer = styled.div`
-  margin-top: 50px;
   align-items: center;
-  width: 100%;
+  width: 80%;
+  margin: 50px auto;
   flex-direction: row;
   display: flex;
   gap: 150px;
@@ -81,6 +85,8 @@ const GVVIndexContainer = styled.div`
   padding: 48px 0px 42px 0px;
   @media (max-width: 1200px) {
     flex-direction: column;
+    width: 100%;
+    gap: 10px;
   }
 `;
 
@@ -99,14 +105,28 @@ const ClientsPart = styled.div`
 `;
 const LeftPart = styled.div`
   display: flex;
+  margin: 0 auto;
   flex-direction: column;
   gap: 10px;
+`;
+const SummaryImg = styled.img`
+  width: 90%;
+  margin: 0 auto;
 `;
 
 const CenterPart = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin: 0 auto;
+`;
+const CenterImgChart = styled.img`
+  width: 90%;
+  margin: 0 auto;
+`;
+const CenterImg = styled.img`
+  width: 90%;
+  margin: 0 auto;
 `;
 
 const RightPart = styled.div`
@@ -114,6 +134,7 @@ const RightPart = styled.div`
   display: flex;
   flex-direction: column;
   color: white;
+  margin: 0 auto;
 `;
 
 const StyledGlobalImage = styled.img`
@@ -132,6 +153,14 @@ const SummaryPart = styled.div`
   font-size: 13px;
   line-height: 29px;
   color: ${colors.neutrals8};
+
+  @media (max-width: 1100px) {
+    width: 300px;
+  }
+  @media (max-width: 1200px) {
+    margin: 0 auto;
+    text-align: center;
+  }
 `;
 
 const StyledButtonsPart = styled.div`

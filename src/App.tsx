@@ -13,6 +13,7 @@ import Features from "./pages/features/Features";
 import Home from "./pages/home/Home";
 import Sign from "./pages/sign/sign";
 import Round from "./pages/round/Round";
+import Portfolio from "./pages/portfolio/Portfolio";
 import Dashboard from "./pages/dashboard/Dashboard";
 import ProtectedRouter from "./components/layout/ProtectedRouter";
 import { notFoundPath } from "./core/util/pathBuilder.util";
@@ -40,6 +41,10 @@ function App() {
     {
       path: "/faq",
       element: <Faq />,
+    },
+    {
+      path: "/portfolio",
+      element: <Portfolio />,
     },
     {
       path: "/round",

@@ -141,12 +141,15 @@ const MainTips = styled.div`
   @media screen and (min-width: ${RESPONSIVE.tablet}) {
     width: 80%;
   }
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+  }
 `;
 
 const StyledButton = styled(ButtonPrimarySmall)`
   border-radius: 0px;
   font-size: 16px;
-  border: solid 1px  ${colors.mainColor};
+  border: solid 1px ${colors.mainColor};
   height: 54px;
   width: 189px;
   background: ${colors.primaryYellow};

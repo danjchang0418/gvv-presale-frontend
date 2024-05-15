@@ -5,7 +5,7 @@ import ModalContent from "../modal/children/modal-content/ModalContent";
 import { colors, sizes } from "./../../core/constants/styleguide.const";
 
 export const H1 = styled.span`
-  font-family: 'DM Sans';
+  font-family: "DM Sans";
   font-style: normal;
   font-weight: 700;
   font-size: ${sizes.xxxxxl};
@@ -14,7 +14,7 @@ export const H1 = styled.span`
 `;
 
 export const H2 = styled.span`
-  font-family: 'DM Sans';
+  font-family: "DM Sans";
   font-style: normal;
   font-weight: 700;
   font-size: ${sizes.xxxl};
@@ -23,7 +23,7 @@ export const H2 = styled.span`
 `;
 
 export const H3 = styled.span`
-  font-family: 'DM Sans';
+  font-family: "DM Sans";
   font-style: normal;
   font-weight: 700;
   font-size: ${sizes.xxl};
@@ -32,7 +32,7 @@ export const H3 = styled.span`
 `;
 
 export const H4 = styled.span`
-  font-family: 'DM Sans';
+  font-family: "DM Sans";
   font-style: normal;
   font-weight: 700 !important;
   font-size: 32px;
@@ -41,7 +41,7 @@ export const H4 = styled.span`
 `;
 
 export const Body1 = styled.span`
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -65,7 +65,7 @@ export const Body2Bold = styled(Body2)`
 `;
 
 export const Caption1 = styled.span`
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -77,7 +77,7 @@ export const Caption1Bold = styled(Caption1)`
 `;
 
 export const Caption2 = styled.span`
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -89,7 +89,7 @@ export const Caption2Bold = styled(Caption2)`
 `;
 
 export const HairlineLarge = styled.span`
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -97,7 +97,7 @@ export const HairlineLarge = styled.span`
 `;
 
 export const HairlineSmall = styled.span`
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
@@ -105,7 +105,7 @@ export const HairlineSmall = styled.span`
 `;
 
 export const ButtonDefault = styled.span`
-  font-family: 'DM Sans';
+  font-family: "DM Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -113,7 +113,7 @@ export const ButtonDefault = styled.span`
 `;
 
 export const Hairline2 = styled.span`
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
@@ -121,7 +121,7 @@ export const Hairline2 = styled.span`
 `;
 
 export const ButtonSmall = styled.span`
-  font-family: 'DM Sans';
+  font-family: "DM Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -129,7 +129,7 @@ export const ButtonSmall = styled.span`
 `;
 
 export const Button2 = styled.span`
-  font-family: 'DM Sans';
+  font-family: "DM Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -148,7 +148,7 @@ export const Sub = styled.sub`
 `;
 
 export const Caption = styled.span`
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -170,7 +170,7 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: 0 32px;
+  padding: 0 27px;
   height: ${sizes.xxxl};
   line-height: 16px;
   border-radius: 90px;
@@ -183,7 +183,7 @@ export const Button = styled.button`
 
 export const ButtonPrimary = styled(Button)`
   background: ${colors.primaryBlue};
-  
+
   &:hover {
     transition: all 0.25s ease;
     background-color: ${colors.darkBlue};
@@ -256,19 +256,19 @@ export const ActionButtonGroup = styled.div`
 `;
 
 export const Padding = css`
+  padding: 0 76px;
+  @media (max-width: ${RESPONSIVE.large}) {
     padding: 0 76px;
-    @media (max-width: ${RESPONSIVE.large}) {
-      padding: 0 76px;
-    }
-    @media (max-width: ${RESPONSIVE.medium}) {
-      padding: 0 64px;
-    }
-    @media (max-width: ${RESPONSIVE.small}) {
-      padding: 0 32px;
-    }
-    @media (max-width: ${RESPONSIVE.xSmall}) {
-      padding: 4px;
-    }
+  }
+  @media (max-width: ${RESPONSIVE.medium}) {
+    padding: 0 64px;
+  }
+  @media (max-width: ${RESPONSIVE.small}) {
+    padding: 0 32px;
+  }
+  @media (max-width: ${RESPONSIVE.xSmall}) {
+    padding: 4px;
+  }
 `;
 
 export const IconButton = styled.button`
@@ -327,7 +327,7 @@ export const FundsManageModalContainer = styled(ModalContent)`
   @media (max-width: 660px) {
     max-width: 375px;
   }
-  
+
   @media (max-width: 375px) {
     height: inherit;
     border-radius: 0px;
@@ -356,39 +356,39 @@ export const ShareButton = styled.button`
 `;
 
 export const Headline1 = styled.h1`
-font-family: 'DM Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 64px;
-line-height: 64px;
-text-align: center;
-letter-spacing: -0.012em;
-color: ${colors.neutrals8};
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 64px;
+  text-align: center;
+  letter-spacing: -0.012em;
+  color: ${colors.neutrals8};
 `;
 
 export const Headline4 = styled.h2`
-font-family: 'DM Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 32px;
-line-height: 40px;
-text-align: center;
-letter-spacing: -0.01em;
-color: ${colors.neutrals8};
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: ${colors.neutrals8};
 `;
 
 export const ContainerBox = styled.div`
   padding: 0 4px;
   @media screen and (min-width: 375px) {
-      padding: 0 32px;
+    padding: 0 32px;
   }
   @media screen and (min-width: 768px) {
-      padding: 0 56px;
+    padding: 0 56px;
   }
   @media screen and (min-width: 1024px) {
-      padding: 0 80px;
+    padding: 0 80px;
   }
   @media screen and (min-width: 1440px) {
-      padding: 0 160px;
+    padding: 0 160px;
   }
 `;
