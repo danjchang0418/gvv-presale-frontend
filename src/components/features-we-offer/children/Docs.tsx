@@ -29,9 +29,6 @@ const Content = styled.div`
   justify-content: center;
   background-color: ${colors.neutrals2};
   align-items: center;
-	@media screen and (min-width: ${RESPONSIVE.small}) {
-		width: 30%;
-	}
 `;
 
 const Icon = styled.div`
@@ -46,7 +43,7 @@ const Title = styled.h1`
   font-style: italic;
   font-size: 16px;
   line-height: 18px;
-  font-family: 'ABeeZee';
+  font-family: "ABeeZee";
   color: ${colors.neutrals8};
 `;
 

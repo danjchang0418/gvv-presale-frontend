@@ -63,7 +63,7 @@ const Home = () => {
               {/* <HowItWorks /> */}
               {/* <AboutStafir /> */}
               <ReadOurDocs />
-              <AndroidAndIosApp />
+              {/* <AndroidAndIosApp /> */}
               {/* <PhotoOnlyPage /> */}
               <Faqs />
               <ContactInformation />

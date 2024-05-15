@@ -54,15 +54,21 @@ const Container = styled.div`
   gap: 100px;
   padding-bottom: 30px;
   padding-bottom: 100px;
+  @media (max-width: 924px) {
+    padding: 40px;
+  }
 `;
 
 const StyledDiv = styled.div`
-  width: 656px;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 40px;
+  @media (max-width: 772px) {
+    width: 100%;
+  }
 `;
 
 const StyledDescription = styled.p`
@@ -79,6 +85,10 @@ const StyledContactInfo = styled.div`
   gap: 20px;
   justify-content: center;
   align-items: center;
+  @media (max-width: 772px) {
+    flex-direction: column;
+    width: 300px;
+  }
 `;
 
 const StyledSubscribeButton = styled(ButtonPrimarySmall)`
@@ -100,13 +110,19 @@ const StyledGlobalImage = styled.img`
   bottom: 0px;
   left: 200px;
   filter: brightness(20%);
+  @media (max-width: 924px) {
+    display: none;
+  }
 `;
 
 const StyledTriImage = styled.img`
-position: absolute;
-top: 0px;
-right: 200px;
-filter: brightness(20%);
+  position: absolute;
+  top: 0px;
+  right: 200px;
+  filter: brightness(20%);
+  @media (max-width: 924px) {
+    display: none;
+  }
 `;
 
 const StyledSocialDiv = styled.div`
@@ -128,6 +144,12 @@ const StyledEmailDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: start;
+  @media (max-width: 924px) {
+    width: 80%;
+  }
+  @media (max-width: 500px) {
+    width: 80%;
+  }
 `;
 
 const StyledEmail = styled.input`

@@ -19,9 +19,6 @@ import {
 } from "../../core/util/pathBuilder.util";
 import BurgerButton from "../button/burger-button/BurgerButton";
 import { ButtonPrimarySmall } from "../styleguide/styleguide";
-
-import SignInModal from "../modal/children/modal-content/SignInModal";
-import SignUpModal from "../modal/children/modal-content/SignUpModal";
 import AlertComponent from "../alert/AlertComponent";
 import { defaultWagmiConfig } from "@web3modal/wagmi/react/config";
 import {
@@ -66,26 +63,9 @@ createWeb3Modal({
 });
 
 const Header = () => {
-  const modal = useWeb3Modal();
-  const state = useWeb3ModalState();
-  const { themeMode, themeVariables, setThemeMode } = useWeb3ModalTheme();
-  const events = useWeb3ModalEvents();
   const { smallerThanLarge } = useWatchResize();
 
-  const dispatch = useAppDispatch();
-
-  const { showSignUpModal, showSignInModal } = useAppSelector(
-    (state) => state.modal
-  );
   const { showAlert } = useAppSelector((state) => state.alert);
-
-  const sign_up = () => {
-    dispatch(setShowSignUpModalAction(true));
-  };
-
-  const sign_in = () => {
-    dispatch(setShowSignInModalAction(true));
-  };
 
   return (
     <>
@@ -104,7 +84,7 @@ const Header = () => {
               <LinkGroup>
                 <StyledLink to={homePath()}>{`Home`}</StyledLink>
                 <StyledLink to={""}>{`Page`}</StyledLink>
-                <StyledLink to={""}>{`Portfolio`}</StyledLink>
+                <StyledLink to={"/portfolio"}>{`Portfolio`}</StyledLink>
                 <StyledLink to={featuresPath()}>{`Features`}</StyledLink>
                 <StyledLink to={faqPath()}>{`Blog`}</StyledLink>
                 <StyledLink to={""}>{`Contact`}</StyledLink>
@@ -116,12 +96,10 @@ const Header = () => {
           </If>
           <StyledButtonGroup>
             <w3m-button />
-            <StyledJoinLink to={"sign"}>{`Join pre-Sell`}</StyledJoinLink>
+            <StyledJoinLink to={"/sign"}>{`Join pre-Sell`}</StyledJoinLink>
           </StyledButtonGroup>
         </NavigateSection>
       </StyledHeader>
-      {showSignUpModal && <SignUpModal />}
-      {showSignInModal && <SignInModal />}
       {showAlert && <AlertComponent />}
     </>
   );
@@ -166,7 +144,7 @@ const NavigateSection = styled.div`
   flex-direction: row;
   width: 90%;
   justify-content: space-between;
-  align-items: center;
+  align-items: center !important;
   padding: 10px 0px;
   gap: 30px;
   @media screen and (max-width: ${RESPONSIVE.large}) {
@@ -201,6 +179,9 @@ const StyledJoinLink = styled(Link)`
   color: ${colors.mainColor};
   &:hover {
     color: ${colors.mainColor} !important;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 13px;
   }
 `;
 

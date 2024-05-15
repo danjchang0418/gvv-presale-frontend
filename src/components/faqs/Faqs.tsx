@@ -26,7 +26,9 @@ const Faqs = () => {
             description={`Pretium mauris viverra eget nulla eu auctor scelerisque risus. Ornare morbi pulvinar ipsum gravida rutrum. Aliquam aliquet ac vitae pellentesque lectus elementum. Nunc mus et, pulvinar facilisi viverra. At amet mauris fermentum sed. Aliquam ut rhoncus et semper non purus massa risus. Tristique mattis in sed dictum cursus eu lorem placerat.`}
           ></Faq>
         </FaqsPart>
-        <div style={{ alignContent: "right", width: "100%", marginTop: "20px" }}>
+        <div
+          style={{ alignContent: "right", width: "100%", marginTop: "20px" }}
+        >
           <StyledShowMoreButton>{`Show more`}</StyledShowMoreButton>
         </div>
       </StyledDiv>
@@ -55,6 +57,10 @@ const DescriptionDiv = styled.div`
   display: flex;
   flex-direction: row;
   width: 546px;
+  @media (max-width: 800px) {
+    font-size: 20px;
+    width: 290px;
+  }
 `;
 
 const Title = styled.h1`
@@ -80,6 +86,14 @@ const FaqsPart = styled.div`
   justify-content: center;
   align-items: center;
   width: 856px;
+  @media (max-width: 800px) {
+    font-size: 20px;
+    width: 500px;
+  }
+  @media (max-width: 500px) {
+    font-size: 20px;
+    width: 290px;
+  }
 `;
 
 const StyledShowMoreButton = styled(H4)`
